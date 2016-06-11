@@ -1,0 +1,128 @@
+// # SHORT HOWTO
+// ## Sprites
+//     .whatever
+//             +s(codedby)
+// ## gradient example
+//         +g(#232323, #5c5c5c);
+//       horizontal
+//         +gh(#232323, #5c5c5c);
+// ## making bw-images
+//     img
+//            @extend %gray
+// ## predefined media-queries: https://github.com/paranoida/sass-mediaqueries
+//     +r(320)
+//            display: none
+// +max-screen(1000), +iphone5, +iphone4, +ipad-retina, +ipad, +hdpi - also available
+//
+// ## use cycles
+//     @for $i from 1 through 3
+//       .item-#{$i}
+//            width: 2em * $i;
+//     @each $s in a,b,c
+//             #{$s}
+//                display: none
+// ## fonts
+// Save fonts to /src/fonts
+// +font(book, cytiapro-black-webfont)
+// and create mixin
+// =book
+//     font-family: "book", Arial, sans-serif
+
+$text: #2c3e50
+$yellow: #f1c40f
+
++font('museo100', museosanscyrl-100)
++font('museo300', museosanscyrl-300)
++font('museo500', museosanscyrl-500)
++font('museo700', museosanscyrl-700)
++font('museo900', museosanscyrl-900)
++font('fenton', fenton-bold)
+
+=h100
+  font-family: 'museo100', Arial, sans-serif
+
+=h300
+  font-family: 'museo300', Arial, sans-serif
+
+=h500
+  font-family: 'museo500', Arial, sans-serif
+
+=h700
+  font-family: 'museo700', Arial, sans-serif
+
+=h900
+  font-family: 'museo900', Arial, sans-serif
+
+=fenton
+  font-family: 'fenton', Arial, sans-serif
+
+body
+  +h300
+  font-family: 'museo100', Arial, sans-serif
+  font-size: 14px
+  line-height: 1.4
+  color: $text
+
+a
+  color: #000
+  text-decoration: none
+
+.container
+  width: 100%
+  max-width: 1160px
+  padding: 0 15px
+  margin: 0 auto
+  box-sizing: border-box
+
+.header
+  background-color: $yellow
+  background-image: url(../img/scheme-white.png) left
+
+.logo
+  width: 100px
+
+  img
+    width: 100%
+
+.section-title
+  font-size: 33px
+
+.user-menu
+  margin-left: 20px
+
+  &__list
+    display: flex
+    flex-direction: row
+
+  &__el
+    margin-left: 15px
+
+.lang
+  &__list
+    display: flex
+
+  &__el
+    margin-left: 17px
+
+.is-active
+  border-bottom: 1px solid
+
+.text-right
+  text-align: right
+
+.text-left
+  text-align: left
+
+.date-info
+  +h300
+  font-size: 18px
+
+.event-title
+  +fenton
+  margin-top: 40px
+  font-size: 72px
+  line-height: 72px
+  letter-spacing: 2px
+  text-transform: uppercase
+  color: #fff
+  text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1)

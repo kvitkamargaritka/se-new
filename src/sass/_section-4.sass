@@ -1,0 +1,70 @@
+.section_tickets
+
+  .item
+
+    &__list
+      display: flex
+      flex-direction: row
+      justify-content: center
+      margin-bottom: 65px
+
+    &__el
+      margin: 0 37px
+
+  .ticket
+    padding: 25px 0
+    width: 220px
+    text-align: center
+    background-color: #fff
+    border: 1px solid #f4f4f4
+    box-shadow: 0 0 3px rgba(0, 0, 0, 0.1)
+    box-sizing: border-box
+
+    &.is-active
+      box-shadow: 0 0 60px rgba(0, 0, 0, 0.1)
+
+      .price
+        color: $yellow
+
+      .btn_small
+        box-shadow: 0px 5px 19px rgba(0, 0, 0, 0.2)
+        background-color: $yellow
+        color: #fff
+        border-color: $yellow
+
+  .row
+    display: flex
+    justify-content: center
+
+  .bold
+    +h700
+
+  .list
+    +h300
+    font-size: 16px
+    text-align: left
+    width: 120px
+    margin: 20px auto
+
+  .sale
+    margin-bottom: 35px
+
+  .price
+    +h700
+    font-size: 36px
+    color: $grey
+    line-height: 1
+
+  .currency
+    +h500
+    font-size: 14px
+
+  .descr
+    +h300
+    font-size: 18px
+
+  .yellow
+    color: $yellow
+
+  .grey
+    color: $grey

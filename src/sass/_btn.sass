@@ -1,9 +1,35 @@
 .btn
+  display: block
+  text-align: center
   text-transform: uppercase
   border-radius: 30px
+  letter-spacing: 2px
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1)
+  cursor: pointer
+  user-select: none
+
   &_big
+    +h900
+    padding: 5px 0
     width: 250px
-    padding: 10px 30px
+    font-size: 20px
+
+  &_small
+    +h700
+    width: 150px
+    padding: 5px 0
+    font-size: 16px
+    border: 1px solid $grey
+    box-shadow: none
+
   &_blue
     background-color: #32465a
     color: $yellow
+
+  &_yellow
+    background-color: $yellow
+    color: #fff
+
+  &_grey
+    background-color: #fff
+    color: $grey

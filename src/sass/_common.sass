@@ -30,6 +30,7 @@
 
 $text: #2c3e50
 $yellow: #f1c40f
+$grey: #bdc3c7
 
 +font('museo100', museosanscyrl-100)
 +font('museo300', museosanscyrl-300)
@@ -56,6 +57,21 @@ $yellow: #f1c40f
 =fenton
   font-family: 'fenton', Arial, sans-serif
 
+h1
+  font-size: 36px
+
+h4
+  +h700
+  font-size: 30px
+
+h5
+  +h500
+  font-size: 24px
+
+h6
+  +h300
+  font-size: 18px
+
 body
   +h300
   font-family: 'museo100', Arial, sans-serif
@@ -64,28 +80,33 @@ body
   color: $text
 
 a
-  color: #000
+  color: $text
   text-decoration: none
+  cursor: pointer
+
+img
+  width: 100%
 
 .container
   width: 100%
   max-width: 1160px
+  min-width: 1160px
   padding: 0 15px
   margin: 0 auto
   box-sizing: border-box
 
 .header
-  background-color: $yellow
-  background-image: url(../img/scheme-white.png) left
+  background: url(../img/scheme-white.png) no-repeat top right $yellow
+
+.row
+  &__wrap
+    display: flex
+    flex-direction: row
+    justify-content: space-between
+    align-items: center
 
 .logo
   width: 100px
-
-  img
-    width: 100%
-
-.section-title
-  font-size: 33px
 
 .user-menu
   margin-left: 20px
@@ -105,7 +126,7 @@ a
     margin-left: 17px
 
 .is-active
-  border-bottom: 1px solid
+  border-bottom: 1px solid $text
 
 .text-right
   text-align: right
@@ -119,10 +140,43 @@ a
 
 .event-title
   +fenton
-  margin-top: 40px
+  margin: 40px 0
   font-size: 72px
   line-height: 72px
   letter-spacing: 2px
   text-transform: uppercase
   color: #fff
   text-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1)
+
+.event-info
+  margin: 75px 0 50px
+  font-size: 18px
+
+.days
+  display: flex
+  justify-content: space-between
+
+.day
+  width: 25%
+
+  .vertical-list
+
+    &__item
+      margin-left: 20px
+      margin-top: 20px
+
+    &__el
+      font-size: 18px
+
+    h5
+      margin-bottom: 20px
+
+  h5
+    color: $yellow
+    font-weight: bold
+    margin-bottom: 20px
+
+  p
+    +h100
+    font-size: 18px
+    margin: 35px 0

@@ -1,0 +1,40 @@
+.section
+  margin: 90px 0
+
+  &__title
+    +h300
+    margin: 150px 0 70px 125px
+    position: relative
+
+    &::before
+      font-size: 18px
+      position: absolute
+      top: -30px
+      left: -70px
+
+    &_1
+      &::before
+        content: '001'
+
+    &_2
+      &::before
+        content: '010'
+
+    &_3
+      &::before
+        content: '011'
+
+    &_4
+      &::before
+        content: '100'
+
+    &::after
+      content: ''
+      position: absolute
+      top: -90px
+      left: 0
+      display: block
+      width: 3px
+      height: 150px
+      background-color: $yellow
+      transform: rotate(45deg)

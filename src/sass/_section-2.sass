@@ -10,6 +10,8 @@
     &__el
       width: 24%
       margin: 0 5px 45px
+      +r(1160)
+        width: 23%
 
   .item
 
@@ -30,6 +32,14 @@
 
     &__el
       margin-right: 5px
+
+    &__link
+      border-radius: 5px
+      i
+        border-radius: 2px
+        transition: all 0.4s
+        &:hover
+          background-color: $yellow
 
   .row
     display: flex

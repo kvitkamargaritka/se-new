@@ -7,6 +7,13 @@
     display: flex
     flex-direction: row
     justify-content: space-between
+    +r(1160)
+      flex-wrap: wrap
+      justify-content: center
+
+  &__left,
+  &__center
+    margin: 30px
 
   &__center
     width: 290px
@@ -64,3 +71,7 @@
       border-radius: 30px
       color: $text
       background-color: $yellow
+      cursor: pointer
+      transition: all .2s
+      &:hover
+        color: #fff
